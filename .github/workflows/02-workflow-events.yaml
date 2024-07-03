@@ -8,5 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Show the trigger
-        run: echo "This event is triggered due to ${{github.event.client_payload.key}} event"
+        run: echo "This event is triggered due to ${{github.event_name}} event"
 
