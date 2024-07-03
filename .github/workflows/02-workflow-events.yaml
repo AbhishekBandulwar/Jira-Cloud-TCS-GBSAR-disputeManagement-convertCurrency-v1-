@@ -1,11 +1,12 @@
 name: 02- Workflow Events
 
-on: push
+on: 
+  workflow_dispatch
 
 jobs:
   echo:
     runs-on: ubuntu-latest
     steps:
       - name: Show the trigger
-        run: echo "This event is triggered due to ${{github.event_name}} event"
+        run: echo "This event is triggered due to ${{github.event.client_payload.key}} event"
 
